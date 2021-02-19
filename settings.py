@@ -6,6 +6,6 @@
 # @File : settings.py
 # @Remark : 
 # -----------------------------
-
-username = '20174982'
-password = 'believe66'
+info_file = open('./info.txt')
+username = info_file.readline()[9:].strip()
+password = info_file.readline()[9:].strip()

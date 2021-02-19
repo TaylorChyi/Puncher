@@ -30,6 +30,8 @@ try:
 
     submit_btn = browser.find_elements_by_tag_name('button')[1]
     submit_btn.click()
+
+    browser.find_elements_by_tag_name('img')[0]
 finally:
     browser.close()
     browser.quit()
