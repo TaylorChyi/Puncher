@@ -17,7 +17,7 @@ password.send_keys(settings.password)
 
 try:
     element = WebDriverWait(browser, 10).until(
-        EC.presence_of_element_located((By.ID, 'index_login_btn'))
+        EC.presence_of_element_located((By.XPATH, '//*[@id="index_login_btn"]'))
     )
     index_login_btn = browser.find_element_by_id('index_login_btn')
     index_login_btn.click()
