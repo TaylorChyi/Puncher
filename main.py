@@ -2,6 +2,7 @@
 # encoding:utf-8
 
 from selenium import webdriver
+import time
 
 info_file = open('./info.txt')
 username = info_file.readline()[9:].strip()
@@ -32,8 +33,7 @@ try:
 
     submit_btn = browser.find_elements_by_tag_name('button')[1]
     submit_btn.click()
-
-    browser.find_elements_by_tag_name('img')[0]
 finally:
+    time.sleep(2)
     browser.close()
     browser.quit()
