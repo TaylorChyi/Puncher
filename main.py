@@ -3,10 +3,12 @@
 
 from selenium import webdriver
 
-username = '20174982'
-password = 'believe66'
+info_file = open('./info.txt')
+username = info_file.readline()[9:].strip()
+password = info_file.readline()[9:].strip()
 
-browser = webdriver.Chrome(executable_path='./chromedriver.exe')
+# browser = webdriver.Chrome(executable_path='./chromedriver.exe')
+browser = webdriver.Edge(executable_path='./msedgedriver.exe')
 browser.get('https://e-report.neu.edu.cn/mobile/notes/create')
 
 username_input = browser.find_element_by_id('un')
