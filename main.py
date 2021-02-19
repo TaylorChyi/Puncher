@@ -25,7 +25,7 @@ try:
     health_state_spin = browser.find_elements_by_class_name('el-radio__spin')[4]
     health_state_spin.click()
 
-    journey_info_spin = browser.find_elements_by_class_name('el-radio__spin')[12]
+    journey_info_spin = browser.find_elements_by_tag_name('button')[1]
     journey_info_spin.click()
 
     submit_btn = browser.find_element_by_class_name('el-button Findbutton el-button--primary')
