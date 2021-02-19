@@ -1,19 +1,19 @@
-from telnetlib import EC
+#! python3
+# encoding:utf-8
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 
-import settings
+username = '20174982'
+password = 'believe66'
 
-browser = webdriver.Chrome()
+browser = webdriver.Chrome(executable_path='./chromedriver.exe')
 browser.get('https://e-report.neu.edu.cn/mobile/notes/create')
 
-username = browser.find_element_by_id('un')
-password = browser.find_element_by_id('pd')
+username_input = browser.find_element_by_id('un')
+password_input = browser.find_element_by_id('pd')
 
-username.send_keys(settings.username)
-password.send_keys(settings.password)
+username_input.send_keys(username)
+password_input.send_keys(password)
 
 index_login_btn = browser.find_element_by_id('index_login_btn')
 index_login_btn.click()
